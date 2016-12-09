@@ -1,5 +1,5 @@
 
-# Android中点击传递事件详解
+# Android中点击事件传递详解
 
 ## GroupView 中方法的说明
      * public boolean onInterceptTouchEvent(MotionEvent ev)
@@ -62,6 +62,7 @@
     * 点击MyLayout区域，这个流程可以看出。在API中实现的，所有都没有拦截，默认都不消费方法。
     * 一个正常的点击事件包括：ACTION_DOWN -> ACTION_MOVE -> ACTION_UP
     * **首先监测父类是否使用onInterceptTouchEvent拦截** ，如果拦截后，所有事件都在当前的容器中消费事件。
+    * 全面理解事件传递的执行与消费
         1. 容器拦截后，使用该事件，需要在onTouchEvent()中返回true，使用其所有事件。Tag4 运行事件中表现出来。
         2. 容器拦截后，不使用该事件，需要在onTouchEvent()中返回false，那么只会消费 ACTION_DOWN事件。Tag3 运行事件中表现出来。
         3. 容器不拦截，控件使用所有事件。Tag1 运行事件中表现出来。
