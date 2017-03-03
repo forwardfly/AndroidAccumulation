@@ -6,4 +6,4 @@
 
 ## Android 中点击事件传递详解
 
-    https://github.com/forwardfly/AndroidAccumulation/tree/master/app/src/main/java/com/kf/knowledge/accumulation/ui/event
+    <https://github.com/forwardfly/AndroidAccumulation/tree/master/app/src/main/java/com/kf/knowledge/accumulation/ui/event>
